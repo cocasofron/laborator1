@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication2.Models
 {
@@ -6,6 +7,7 @@ namespace WebApplication2.Models
     {
         //[Key()]
         public int Id { get; set; }
+        [StringLength(100, MinimumLength = 2)]
         public string Title { get; set; }
         public int Runtime { get; set; }
         public double Rating { get; set; }
